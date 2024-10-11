@@ -1,0 +1,35 @@
+<ion-content class="ion-padding">
+  <form (ngSubmit)="onLogin()">
+    <ion-item>
+      <ion-input
+        type="email"
+        [(ngModel)]="email"
+        name="email"
+        required
+        label="Email"
+        labelPlacement="floating"
+      />
+    </ion-item>
+
+    <ion-item>
+      <ion-input
+        type="password"
+        [(ngModel)]="password"
+        name="password"
+        required
+        label="Password"
+        labelPlacement="floating"
+      ></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" type="submit" [disabled]="!email || !password">
+      Login
+    </ion-button>
+  </form>
+  <div class="ion-padding">
+    <ion-button expand="full">Google Login</ion-button>
+  </div>
+  <div class="ion-padding">
+    <ion-button expand="full"> Facebook Login </ion-button>
+  </div>
+</ion-content>
